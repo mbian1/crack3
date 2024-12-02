@@ -35,7 +35,7 @@ char ** loadFileAA(char *filename, int *size)
     while (fgets(buffer, sizeof(buffer), in)) {
 
         // Trim newline
-        char *nl = strchr(fileName, '\n');
+        char *nl = strchr(buffer, '\n');
         if(nl) *nl = '\0';
 
         // Expand array if necessary
@@ -87,7 +87,7 @@ char (*loadFile2D(char *filename, int *size))[COLS] {
 
     while (fgets(buffer, sizeof(buffer), in)) {
         // Trim newline
-        char *nl = strchr(fileName, '\n');
+        char *nl = strchr(buffer, '\n');
         if(nl) *nl = '\0';
 
         // Expand array if necessary
